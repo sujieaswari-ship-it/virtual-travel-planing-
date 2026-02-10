@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>TravelPlanner</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#destinations" class="nav-link">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#itinerary" class="nav-link">Itinerary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#budget" class="nav-link">Budget</a>
+                    </li>
+                </ul>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Plan Your Perfect Journey</h1>
+                <p class="hero-subtitle">Discover amazing destinations and create unforgettable travel experiences</p>
+                <div class="hero-search">
+                    <input type="text" id="destinationSearch" placeholder="Where do you want to go?">
+                    <button id="searchBtn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="destinations" class="destinations">
+            <div class="container">
+                <h2 class="section-title">Popular Destinations</h2>
+                <div class="destination-grid" id="destinationGrid">
+                    <!-- Destinations will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="itinerary" class="itinerary">
+            <div class="container">
+                <h2 class="section-title">Travel Itinerary</h2>
+                <div class="itinerary-planner">
+                    <div class="itinerary-form">
+                        <div class="form-group">
+                            <label for="tripName">Trip Name</label>
+                            <input type="text" id="tripName" placeholder="My Amazing Trip">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="startDate">Start Date</label>
+                                <input type="date" id="startDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="endDate">End Date</label>
+                                <input type="date" id="endDate">
+                            </div>
+                        </div>
+                        <button id="addDayBtn" class="btn btn-secondary">
+                            <i class="fas fa-plus"></i> Add Day
+                        </button>
+                    </div>
+                    <div class="itinerary-days" id="itineraryDays">
+                        <!-- Itinerary days will be added here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="budget" class="budget">
+            <div class="container">
+                <h2 class="section-title">Budget Tracker</h2>
+                <div class="budget-planner">
+                    <div class="budget-form">
+                        <div class="form-group">
+                            <label for="totalBudget">Total Budget ($)</label>
+                            <input type="number" id="totalBudget" placeholder="5000">
+                        </div>
+                        <button id="addExpenseBtn" class="btn btn-secondary">
+                            <i class="fas fa-plus"></i> Add Expense
+                        </button>
+                    </div>
+                    <div class="budget-overview">
+                        <div class="budget-cards">
+                            <div class="budget-card">
+                                <h3>Total Budget</h3>
+                                <p class="amount" id="totalBudgetDisplay">$0</p>
+                            </div>
+                            <div class="budget-card">
+                                <h3>Spent</h3>
+                                <p class="amount spent" id="totalSpent">$0</p>
+                            </div>
+                            <div class="budget-card">
+                                <h3>Remaining</h3>
+                                <p class="amount remaining" id="totalRemaining">$0</p>
+                            </div>
+                        </div>
+                        <div class="expense-list" id="expenseList">
+                            <!-- Expenses will be listed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Virtual Travel Planner. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
